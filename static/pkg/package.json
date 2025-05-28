@@ -1,0 +1,15 @@
+{
+  "name": "uwuifier",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "uwulib_bg.wasm",
+    "uwulib.js",
+    "uwulib.d.ts"
+  ],
+  "main": "uwulib.js",
+  "types": "uwulib.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
