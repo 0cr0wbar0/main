@@ -1,3 +1,5 @@
+<?php
+?>
 <html lang="en" class='background'>
 
 <head>
