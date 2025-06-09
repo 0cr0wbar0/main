@@ -9,6 +9,7 @@ $arr = array("Funny number string: ", "Your funky lil number string: ", "I see y
     <link rel="shortcut_icon" type="image/png" href="./static/shocked_hugh.ico">
     <link rel="apple-touch-icon" href="./static/shocked_hugh.png">
     <link rel="icon" type="image/x-icon" href="./static/shocked_hugh.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         function sound() {
             let noise = document.getElementById("noise");

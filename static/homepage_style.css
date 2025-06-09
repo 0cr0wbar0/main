@@ -12,7 +12,7 @@
     margin-bottom: 1.5rem;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1050px) {
     .titles {
         font-size: x-large;
     }
@@ -97,7 +97,7 @@
     display: grid;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1050px) {
     .panels {
         display: flex;
         max-width: 80rem;
@@ -131,17 +131,17 @@
     .sidebar a {
         background-color: #003d09;
         border-radius: 1rem;
-        font-size: larger;
+        font-size: x-large;
     }
 
     .sidebar h2 {
-        font-size: larger;
+        font-size: x-large;
         text-align: center;
     }
 
     .bio {
         text-align: center;
-        font-size: larger;
+        font-size: x-large;
     }
 }
 
@@ -178,7 +178,7 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1050px) {
     .footer {
         margin: 0.5rem 10%;
     }
