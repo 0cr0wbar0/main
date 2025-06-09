@@ -14,7 +14,7 @@
 
 @media (max-width: 1050px) {
     .titles {
-        font-size: x-large;
+        font-size: larger;
     }
 }
 
@@ -126,22 +126,15 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-    }
-
-    .sidebar a {
-        background-color: #003d09;
-        border-radius: 1rem;
-        font-size: x-large;
+        flex-wrap: wrap;
     }
 
     .sidebar h2 {
-        font-size: x-large;
         text-align: center;
     }
 
     .bio {
         text-align: center;
-        font-size: x-large;
     }
 }
 
