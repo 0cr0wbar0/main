@@ -1,5 +1,6 @@
 <?php
 ?>
+<!doctype html>
 <html lang="en" class='background'>
 
 <head>
@@ -16,7 +17,7 @@
 
 <h1 class='header'>UwU-ifier, written in Rust with WebAssembly!</h1>
 
-<h3 class='header'>Enter text to be UwU-ified here :3</h3>
+<h2 class='header'>Enter text to be UwU-ified here :3</h2>
 
 <form method='POST'>
 	<textarea name='text' id='text'></textarea>

@@ -21,7 +21,7 @@
 	background-color: #fca77c;
 	color: #87411e;
 	resize: none;
-	width: 250px;
+	width: 300px;
 	height: 200px;
 }
 
@@ -32,6 +32,7 @@
 .header {
 	background-color: #fca77c;
 	color: #87411e;
+	text-align: center;
 	border-radius: 10px;
 }
 
@@ -44,4 +45,14 @@
 
 .background {
 	background-color: #facab1;
+}
+
+@media (max-width: 680px) {
+	#text {
+		font-size: large;
+	}
+
+	.box {
+		font-size: large;
+	}
 }
