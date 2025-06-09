@@ -12,6 +12,12 @@
     margin-bottom: 1.5rem;
 }
 
+@media (max-width: 1050px) {
+    .titles {
+        font-size: x-large;
+    }
+}
+
 .box {
     display: flex;
     flex-direction: column;
@@ -118,21 +124,24 @@
     .sidebar nav {
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: center;
     }
 
     .sidebar a {
         background-color: #003d09;
         border-radius: 1rem;
+        font-size: larger;
     }
 
     .sidebar h2 {
-        font-size: medium;
+        font-size: larger;
         text-align: center;
     }
 
     .bio {
         text-align: center;
+        font-size: larger;
     }
 }
 
@@ -168,4 +177,10 @@
 
 .footer img:hover{
     transform: scale(1.1);
+}
+
+@media (max-width: 1050px) {
+    .footer {
+        margin: 0.5rem 10%;
+    }
 }
