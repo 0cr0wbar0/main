@@ -57,6 +57,7 @@ $arr = array("Funny number string: ", "Your funky lil number string: ", "I see y
     <a href="https://j0.lol"><img src="static/icons/j0.gif"></a>
     <a href="https://meihapps.gay"><img src="static/icons/mei-ghtyeight.gif"></a>
     <a href="https://maia.crimew.gay"><img src="static/icons/maiacrimew.png"></a>
+    <a href="https://andou.gay"><img src="static/icons/andou2.gif"></a>
     <a href="https://brainmade.org"><img src="static/icons/brainmade.png"></a>
     <img src="static/icons/furnow.gif">
     <img src="static/icons/forever_online.gif">
