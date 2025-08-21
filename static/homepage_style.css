@@ -26,10 +26,16 @@
 
 .header {
     color: #bcffad;
-    background-color: #003d09;
-    padding: 20px;
-    border-radius: 1rem;
+    padding: 10px;
     text-align: center;
+    align-content: center;
+}
+
+@media (max-width: 1050px) {
+    .header img {
+        height: 80%;
+        width: 80%;
+    }
 }
 
 .subheader {

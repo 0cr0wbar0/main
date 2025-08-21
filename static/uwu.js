@@ -1,9 +1,8 @@
-import init, { uwuifier } from "./pkg/uwulib.js";
+import init, {uwuifier} from "./pkg/uwulib.js";
 
 function uwuify() {
 	const textContent = document.querySelector("#text").value;
-	const output = uwuifier(textContent);
-	document.querySelector("#output").innerText = output;
+	document.querySelector("#output").innerText = uwuifier(textContent);
 }	
 
 init().then(() => {

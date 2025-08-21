@@ -23,7 +23,7 @@ $arr = array("Funny number string: ", "Your funky lil number string: ", "I see y
 
 <div class="titles">
 
-<h1 class="header">cr0wbar's den!</h1>
+<h1 class="header"><img src="static/logo.gif" alt="cr0wbar's den!"></h1>
 
 <h3 class="subheader"><?= $arr[array_rand($arr)] . $_SERVER['REMOTE_ADDR'] ?></h3>
 
