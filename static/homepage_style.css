@@ -31,6 +31,10 @@
     align-content: center;
 }
 
+.header img {
+    image-rendering: pixelated;
+}
+
 @media (max-width: 1050px) {
     .header img {
         height: 80%;
