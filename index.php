@@ -1,5 +1,5 @@
 <?php
-$arr = array("Funny number string: ", "Your funky lil number string: ", "I see you. ", "Current location: ");
+$arr = array("Funny number string: ", "Your funky li'l number string: ", "I see you. ", "Current location: ");
 ?>
 <!doctype html>
 <html lang="en" class="background">
@@ -11,9 +11,17 @@ $arr = array("Funny number string: ", "Your funky lil number string: ", "I see y
     <link rel="icon" type="image/x-icon" href="./static/shocked_hugh.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
+        let count = 0;
         function sound() {
             let noise = document.getElementById("noise");
             noise.play();
+            let image = document.querySelector(".bearcorner");
+            image.style.top = String(Math.random() * document.documentElement.clientHeight) + "px";
+            count++;
+            if (count >= 8) {
+                document.getElementById("oneup").play();
+                count = 0;
+            }
         }
     </script>
     <title>Welcome to the bear den!</title>
@@ -43,7 +51,9 @@ $arr = array("Funny number string: ", "Your funky lil number string: ", "I see y
     </div>
     <div class="bio">
         <p>
-            I'm Finn! I enjoy art, buses, trains, train travel, language-learning, etymology, single-player video games and occasionally programming.
+            I'm Finn! I enjoy digital art, buses, bus travel, trains, train travel, language-learning, etymology, single-player video games and occasionally programming.<br><br>
+            Full-stack web development has a creative side to it that I very much enjoy, and I love PHP just as much as the HTML + CSS + vanilla JS suite. I've also learned and liked my fair share of Rust and Python!<br><br>
+            A portion of my portfolio of programming projects is presented in my Pristine Project Portal on this page, or, in place of the Portal, can be perfervidly perused <a href="https://github.com/0cr0wbar0">here.</a>
         </p>
     </div>
 </div>
@@ -70,6 +80,10 @@ $arr = array("Funny number string: ", "Your funky lil number string: ", "I see y
 
 <audio id="noise">
     <source type="audio/mpeg" src="static/squeak.mp3">
+</audio>
+
+<audio id="oneup">
+    <source type="audio/mpeg" src="static/1up.mp3">
 </audio>
 
 <script src="static/oneko.js"></script>
