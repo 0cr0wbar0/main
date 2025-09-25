@@ -16,6 +16,15 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
             let noise = document.getElementById("noise");
             noise.play();
             let image = document.querySelector(".bearcorner");
+            if (image.style.right === "unset") {
+                image.style.left = "unset";
+                image.style.right = "-60px";
+                image.style.rotate = "-45deg";
+            } else {
+                image.style.right = "unset";
+                image.style.left = "-50px";
+                image.style.rotate = "45deg";
+            }
             image.style.top = String(Math.random() * document.documentElement.clientHeight) + "px";
             count++;
             if (count >= 8) {
