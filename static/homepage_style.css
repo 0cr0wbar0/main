@@ -166,11 +166,8 @@
 }
 
 .bearcorner {
-    left: -50px;
-    overflow-x: hidden;
     position: absolute;
     display: inline-block;
-    rotate: 45deg;
     transition: all .2s ease-in-out;
 }
 

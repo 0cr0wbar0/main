@@ -2,7 +2,7 @@
 $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see you. ", "Current location: ");
 ?>
 <!doctype html>
-<html lang="en" class="background">
+<html lang="en" class="background" style="overflow-x: hidden">
 
 <head>
 	<link rel="stylesheet" href="static/homepage_style.css">
@@ -18,11 +18,11 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
             let image = document.querySelector(".bearcorner");
             if (image.style.right === "unset") {
                 image.style.left = "unset";
-                image.style.right = "-60px";
+                image.style.right = "-4rem";
                 image.style.rotate = "-45deg";
             } else {
                 image.style.right = "unset";
-                image.style.left = "-50px";
+                image.style.left = "-4rem";
                 image.style.rotate = "45deg";
             }
             image.style.top = String(Math.random() * document.documentElement.clientHeight) + "px";
@@ -69,7 +69,7 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
 
 </div>
 
-<img width="200rem" height="200rem" onclick="sound()" src="static/maidhugh.PNG" class="bearcorner">
+<img width="200rem" height="200rem" onclick="sound()" src="static/maidhugh.PNG" class="bearcorner" style="left: -4rem; rotate: 45deg; right: unset;">
 
 <div class="footer">
     <a href="https://cr0wbar.dev"><img src="static/icons/logo.gif"></a>
