@@ -13,8 +13,13 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
     <script>
         let count = 0;
         function sound() {
-            let noise = document.getElementById("noise");
-            noise.play();
+            if (++count >= 8) {
+                document.getElementById("oneup").play();
+                count = 0;
+            } else {
+                let noise = document.getElementById("noise");
+                noise.play();
+            }
             let image = document.querySelector(".bearcorner");
             if (image.style.right === "unset") {
                 image.style.left = "unset";
@@ -26,11 +31,6 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
                 image.style.rotate = "45deg";
             }
             image.style.top = String(Math.random() * document.documentElement.clientHeight) + "px";
-            count++;
-            if (count >= 8) {
-                document.getElementById("oneup").play();
-                count = 0;
-            }
         }
     </script>
     <title>Welcome to the bear den!</title>
