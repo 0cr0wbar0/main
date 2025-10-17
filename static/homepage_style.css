@@ -43,11 +43,27 @@
 }
 
 .subheader {
+    display: flex;
+    flex-direction: column;
     color: #bcffad;
     background-color: #003d09;
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 1rem;
     text-align: center;
+}
+
+#emotion {
+    border-style: inset;
+    border-color: green;
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+#submit {
+    border-style: outset;
+    border-color: green;
+    background-color: lightgreen;
+    color: darkgreen;
 }
 
 .background {
@@ -64,6 +80,8 @@
     background-color: #267713;
     color: #dcffd6;
     border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    mask: radial-gradient(2.75rem at 2.75rem 2.75rem, transparent 100%, black) -2.75rem -2.75rem;
 }
 
 .panels div {
@@ -184,7 +202,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    margin: 1rem 20%;
+    margin: 1rem 8%;
 }
 
 .footer img {

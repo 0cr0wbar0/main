@@ -1,5 +1,11 @@
 <?php
-$arr = array("Funny number string: ", "Your funky li'l number string: ", "I see you. ", "Current location: ");
+$arr = array('<h3>tired</h3>',
+        '<h3>so-so</h3>',
+        '<h3>distracted</h3>',
+        '<h3>a desire to play Hollow Knight</h3>',
+        '<audio controls style="margin: 1rem">
+            <source type="audio/mpeg" src="static/half-life-2-death-sound.mp3">
+        </audio>');
 ?>
 <!doctype html>
 <html lang="en" class="background" style="overflow-x: hidden">
@@ -17,8 +23,7 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
                 document.getElementById("oneup").play();
                 count = 0;
             } else {
-                let noise = document.getElementById("noise");
-                noise.play();
+                document.getElementById("noise").play();
             }
             let image = document.querySelector(".bearcorner");
             if (image.style.right === "unset") {
@@ -42,7 +47,36 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
 
 <h1 class="header"><img src="static/logo.gif" alt="cr0wbar's den!"></h1>
 
-<h3 class="subheader"><?= $arr[array_rand($arr)] . $_SERVER['REMOTE_ADDR'] ?></h3>
+<div class="subheader">
+    <h2 style="margin-bottom: 0">
+        Current mood:
+    </h2>
+    <div id="mood">
+    <?=$arr[array_rand($arr)]?>
+    </div>
+    <details>
+        <summary>
+            How about you?
+        </summary>
+        <p id="question">How are you feeling?</p>
+        <label>
+            <input id="emotion" type="text">
+            <button id="submit" type="button">Submit</button>
+        </label>
+    </details>
+    <script>
+        function submit_feelings() {
+            let emotion = document.getElementById("emotion").value;
+            if (emotion === "") {
+                emotion = "nothing";
+            }
+            document.querySelector("#mood").innerHTML = "<h3><b>" + emotion + "</b></h3>";
+            document.querySelector(".subheader details").remove();
+            document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
+        }
+        document.querySelector("#submit").addEventListener("click", submit_feelings);
+    </script>
+</div>
 
 </div>
 
@@ -69,7 +103,7 @@ $arr = array("Funny number string: ", "Your funky li'l number string: ", "I see 
 
 </div>
 
-<img width="200rem" height="200rem" onclick="sound()" src="static/maidhugh.PNG" class="bearcorner" style="left: -4rem; rotate: 45deg; right: unset;">
+<img width="200rem" height="200rem" onclick="sound()" src="static/maidhugh.PNG" class="bearcorner" style="left: -4rem; rotate: 45deg; right: unset; top: 50rem">
 
 <div class="footer">
     <a href="https://cr0wbar.dev"><img src="static/icons/logo.gif"></a>
