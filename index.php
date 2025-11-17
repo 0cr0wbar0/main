@@ -1,12 +1,13 @@
 <?php
-$arr = array('<h3>tired</h3>',
-        '<h3>so-so</h3>',
-        '<h3>distracted</h3>',
-        '<h3>a desire to play Hollow Knight</h3>',
-        '<audio controls style="margin: 1rem">
+$arr = [
+    "<h3>tired</h3>",
+    "<h3>so-so</h3>",
+    "<h3>distracted</h3>",
+    "<h3>a desire to play Hollow Knight</h3>",
+    '<audio controls style="margin: 1rem">
             <source type="audio/mpeg" src="static/half-life-2-death-sound.mp3">
-        </audio>');
-?>
+        </audio>',
+]; ?>
 <!doctype html>
 <html lang="en" class="background" style="overflow-x: hidden">
 
@@ -52,7 +53,7 @@ $arr = array('<h3>tired</h3>',
         Current mood:
     </h2>
     <div id="mood">
-    <?=$arr[array_rand($arr)]?>
+    <?= $arr[array_rand($arr)] ?>
     </div>
     <details>
         <summary>
@@ -65,16 +66,29 @@ $arr = array('<h3>tired</h3>',
         </label>
     </details>
     <script>
-        function submit_feelings() {
-            let emotion = document.getElementById("emotion").value;
-            if (emotion === "") {
-                emotion = "nothing";
-            }
-            document.querySelector("#mood").innerHTML = "<h3><b>" + emotion + "</b></h3>";
-            document.querySelector(".subheader details").remove();
-            document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
-        }
-        document.querySelector("#submit").addEventListener("click", submit_feelings);
+    function sanitise(string) { // credit for function: https://stackoverflow.com/a/48226843
+      const map = {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#x27;',
+          "/": '&#x2F;',
+          "`": '&grave',
+      };
+      const reg = /[&<>"'/]/ig;
+      return string.replace(reg, (match)=>(map[match]));
+    }
+    function submit_feelings() {
+      let emotion = document.getElementById("emotion").value;
+      if (emotion === "") {
+          emotion = "nothing";
+      }
+      document.querySelector("#mood").innerHTML = "<h3><b>" + sanitise(emotion) + "</b></h3>";
+      document.querySelector(".subheader details").remove();
+      document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
+    }
+    document.querySelector("#submit").addEventListener("click", submit_feelings);
     </script>
 </div>
 
@@ -89,7 +103,6 @@ $arr = array('<h3>tired</h3>',
             <a href="https://cr0wbarsartdump.neocities.org">My art website!</a>
             <a href="https://fyp.cr0wbar.dev">My dissertation project!</a>
             <a href="https://threedee.cr0wbar.dev">My 3D web app uni project!</a>
-            <a href="uwu.php">UwU-ifier!</a>
         </nav>
     </div>
     <div class="bio">
