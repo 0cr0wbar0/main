@@ -17,6 +17,13 @@ $arr = [
     <link rel="apple-touch-icon" href="./static/shocked_hugh.png">
     <link rel="icon" type="image/x-icon" href="./static/shocked_hugh.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="cr0wbar's den!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cr0wbar.dev">
+    <meta property="og:image" content="static/logo.gif">
+    <meta property="og:image:type" content="image/gif">
+    <meta property="og:image:width" content="480">
+    <meta property="og:image:height" content="320">
     <script>
         let count = 0;
         function sound() {
@@ -121,7 +128,7 @@ $arr = [
 <div class="footer">
     <a href="https://cr0wbar.dev"><img src="static/icons/logo.gif"></a>
     <a href="https://j0.lol"><img src="static/icons/j0.gif"></a>
-    <a href="https://meihapps.gay"><img src="static/icons/mei-ghtyeight.gif"></a>
+    <a href="https://meihapps.gay"><img src="static/icons/meightyeight.gif"></a>
     <a href="https://maia.crimew.gay"><img src="static/icons/maiacrimew.png"></a>
     <a href="https://andou.gay"><img src="static/icons/andou2.gif"></a>
     <a href="https://brainmade.org"><img src="static/icons/brainmade.png"></a>
