@@ -1,8 +1,8 @@
 <?php
 $arr = [
-    "<h3>tired</h3>",
+    "<h3>productive</h3>",
     "<h3>so-so</h3>",
-    "<h3>distracted</h3>",
+    "<h3>busy</h3>",
     "<h3>a desire to play Hollow Knight</h3>",
     '<audio controls style="margin: 1rem">
             <source type="audio/mpeg" src="static/half-life-2-death-sound.mp3">
@@ -20,10 +20,10 @@ $arr = [
     <meta property="og:title" content="cr0wbar's den!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cr0wbar.dev">
-    <meta property="og:image" content="static/logo.gif">
-    <meta property="og:image:type" content="image/gif">
-    <meta property="og:image:width" content="480">
-    <meta property="og:image:height" content="320">
+    <meta property="og:image" content="static/static_logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="946">
+    <meta property="og:image:height" content="610">
     <script>
         let count = 0;
         function sound() {
