@@ -1,7 +1,7 @@
 <?php
 $arr = [
     "<h3>productive</h3>",
-    "<h3>so-so</h3>",
+    "<h3>creative</h3>",
     "<h3>busy</h3>",
     "<h3>a desire to play Hollow Knight</h3>",
     '<audio controls style="margin: 1rem">
@@ -49,7 +49,7 @@ $arr = [
     <title>Welcome to the bear den!</title>
 </head>
 
-<body>
+<body style="overflow-x: hidden">
 
 <div class="titles">
 
@@ -107,16 +107,24 @@ $arr = [
     <div class="sidebar">
         <h2>The Pristine Project Portal</h2>
         <nav>
-            <a href="https://cr0wbarsartdump.neocities.org">My art website!</a>
             <a href="https://fyp.cr0wbar.dev">My dissertation project!</a>
             <a href="https://threedee.cr0wbar.dev">My 3D web app uni project!</a>
+            <a href="https://github.com/0cr0wbar0">My GitHub portfolio!</a>
+            <a href="https://cr0wbarsartdump.neocities.org">My art website!</a>
         </nav>
     </div>
     <div class="bio">
         <p>
-            I'm Finn! I enjoy programming, web design, digital art, buses, bus travel, trains, train travel, language-learning, etymology and single-player video games.<br><br>
-            Full-stack web development has a creative side to it that I very much enjoy, and I love PHP just as much as the HTML + CSS + vanilla JS suite. I've also learned and liked my fair share of Rust and Python!<br><br>
-            A portion of my portfolio of programming projects is presented in my Pristine Project Portal on this page, or, in place of the Portal, can be perfervidly perused <a href="https://github.com/0cr0wbar0">here.</a>
+            I'm Finn! I enjoy programming (particularly web development) and web design, especially when I'm working with TypeScript, PHP, Python or Rust.
+        </p>
+        <p>
+          Full-stack web development has a creative side to it that I very much enjoy, and I love PHP just as much as the HTML + CSS + JS suite.
+        </p>
+        <p>
+          My portfolio of programming projects is presented in the Pristine Project Portal on this page.
+        </p>
+        <p>
+            On a personal level, I also enjoy digital art, buses, bus travel, trains, train travel, language-learning, etymology and single-player video games!
         </p>
     </div>
 </div>
