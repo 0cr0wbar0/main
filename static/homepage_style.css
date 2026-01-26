@@ -12,12 +12,6 @@
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 1050px) {
-  .titles {
-    font-size: larger;
-  }
-}
-
 .box {
   display: flex;
   flex-direction: column;

@@ -73,8 +73,8 @@ $arr = [
         </label>
     </details>
     <script>
-    function sanitise(string) { // credit for function: https://stackoverflow.com/a/48226843
-      const map = {
+      function sanitise(string) { // credit for function: https://stackoverflow.com/a/48226843
+        const map = {
           '&': '&amp;',
           '<': '&lt;',
           '>': '&gt;',
@@ -82,20 +82,20 @@ $arr = [
           "'": '&#x27;',
           "/": '&#x2F;',
           "`": '&grave',
-      };
-      const reg = /[&<>"'/]/ig;
-      return string.replace(reg, (match)=>(map[match]));
-    }
-    function submit_feelings() {
-      let emotion = document.getElementById("emotion").value;
-      if (emotion === "") {
-          emotion = "nothing";
+        };
+        const reg = /[&<>"'/]/ig;
+        return string.replace(reg, (match)=>(map[match]));
       }
-      document.querySelector("#mood").innerHTML = "<h3><b>" + sanitise(emotion) + "</b></h3>";
-      document.querySelector(".subheader details").remove();
-      document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
-    }
-    document.querySelector("#submit").addEventListener("click", submit_feelings);
+      function submit_feelings() {
+        let emotion = document.getElementById("emotion").value;
+        if (emotion === "") {
+          emotion = "nothing";
+        }
+        document.querySelector("#mood").innerHTML = "<h3><b>" + sanitise(emotion) + "</b></h3>";
+        document.querySelector(".subheader details").remove();
+        document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
+      }
+      document.querySelector("#submit").addEventListener("click", submit_feelings);
     </script>
 </div>
 
@@ -118,13 +118,13 @@ $arr = [
             I'm Finn! I enjoy programming (particularly web development) and web design, especially when I'm working with TypeScript, PHP, Python or Rust.
         </p>
         <p>
-          Full-stack web development has a creative side to it that I very much enjoy, and I love PHP just as much as the HTML + CSS + JS suite.
+            Full-stack web development has a creative side to it that I very much enjoy, and I love PHP just as much as the HTML + CSS + JS suite.
         </p>
         <p>
-          My portfolio of programming projects is presented in the Pristine Project Portal on this page.
+            My portfolio of programming projects is presented in the Pristine Project Portal on this page.
         </p>
         <p>
-            On a personal level, I also enjoy digital art, buses, bus travel, trains, train travel, language-learning, etymology and single-player video games!
+            On a personal level, I also enjoy digital art, buses, trains, language-learning, etymology and single-player video games!
         </p>
     </div>
 </div>
