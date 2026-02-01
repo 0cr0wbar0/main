@@ -49,7 +49,7 @@ $arr = [
     <title>Welcome to the bear den!</title>
 </head>
 
-<body style="overflow-x: hidden">
+<body class="page-body">
 
 <div class="titles">
 
