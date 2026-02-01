@@ -56,7 +56,7 @@ $arr = [
 <h1 class="header"><img src="static/logo.gif" alt="cr0wbar's den!"></h1>
 
 <div class="subheader">
-    <h2 style="margin-bottom: 0">
+    <h2>
         Current mood:
     </h2>
     <div id="mood">

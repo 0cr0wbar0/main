@@ -21,6 +21,7 @@
 .header {
   color: #bcffad;
   padding: 10px;
+  margin: 0;
   text-align: center;
   align-content: center;
 }
@@ -44,6 +45,10 @@
   padding: 0.625rem;
   border-radius: 1rem;
   text-align: center;
+}
+
+.subheader h2 {
+  margin: 0;
 }
 
 #emotion {
