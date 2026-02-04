@@ -3,3 +3,4 @@ composer.*
 vendor
 .well-known
 .DS_Store
+.idea

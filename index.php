@@ -24,28 +24,7 @@ $arr = [
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="946">
     <meta property="og:image:height" content="610">
-    <script>
-        let count = 0;
-        function sound() {
-            if (++count >= 8) {
-                document.getElementById("oneup").play();
-                count = 0;
-            } else {
-                document.getElementById("noise").play();
-            }
-            let image = document.querySelector(".bearcorner");
-            if (image.style.right === "unset") {
-                image.style.left = "unset";
-                image.style.right = "-4rem";
-                image.style.rotate = "-45deg";
-            } else {
-                image.style.right = "unset";
-                image.style.left = "-4rem";
-                image.style.rotate = "45deg";
-            }
-            image.style.top = String(Math.random() * document.documentElement.clientHeight) + "px";
-        }
-    </script>
+    <script defer src="static/script.js"></script>
     <title>Welcome to the bear den!</title>
 </head>
 
@@ -72,31 +51,6 @@ $arr = [
             <button id="submit" type="button">Submit</button>
         </label>
     </details>
-    <script>
-      function sanitise(string) { // credit for function: https://stackoverflow.com/a/48226843
-        const map = {
-          '&': '&amp;',
-          '<': '&lt;',
-          '>': '&gt;',
-          '"': '&quot;',
-          "'": '&#x27;',
-          "/": '&#x2F;',
-          "`": '&grave',
-        };
-        const reg = /[&<>"'/]/ig;
-        return string.replace(reg, (match)=>(map[match]));
-      }
-      function submit_feelings() {
-        let emotion = document.getElementById("emotion").value;
-        if (emotion === "") {
-          emotion = "nothing";
-        }
-        document.querySelector("#mood").innerHTML = "<h3><b>" + sanitise(emotion) + "</b></h3>";
-        document.querySelector(".subheader details").remove();
-        document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
-      }
-      document.querySelector("#submit").addEventListener("click", submit_feelings);
-    </script>
 </div>
 
 </div>
