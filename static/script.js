@@ -20,28 +20,34 @@ function sound() {
         image.style.left = "-4rem";
         image.style.rotate = "45deg";
     }
-    image.style.top = String(Math.random() * document.documentElement.clientHeight) + "px";
+    image.style.top =
+        String(Math.random() * document.documentElement.clientHeight) + "px";
 }
 function sanitise(string) {
+    // credit for function: https://stackoverflow.com/a/48226843
     const map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#x27;',
-        "/": '&#x2F;',
-        "`": '&grave',
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#x27;",
+        "/": "&#x2F;",
+        "`": "&grave"
     };
-    const reg = /[&<>"'/]/ig;
-    return string.replace(reg, (match) => (map[match]));
+    const reg = /[&<>"'/]/gi;
+    return string.replace(reg, (match) => map[match]);
 }
 function submit_feelings() {
-    let emotion = document.getElementById("emotion").value;
+    let emotion = document.getElementById("emotion")
+        .value;
     if (emotion === "") {
         emotion = "nothing";
     }
-    document.querySelector("#mood").innerHTML = "<h3><b>" + sanitise(emotion) + "</b></h3>";
+    document.querySelector("#mood").innerHTML =
+        "<h3><b>" + sanitise(emotion) + "</b></h3>";
     document.querySelector(".subheader details").remove();
-    document.querySelector(".subheader").insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
+    document
+        .querySelector(".subheader")
+        .insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
 }
 document.querySelector("#submit").addEventListener("click", submit_feelings);

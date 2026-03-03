@@ -34,7 +34,7 @@ $arr = [
 
 <h1 class="header"><img src="static/logo.gif" alt="cr0wbar's den!"></h1>
 
-<div class="subheader">
+<div class="subheader neobrutal">
     <h2>
         Current mood:
     </h2>
@@ -57,14 +57,14 @@ $arr = [
 
 <div class="box">
 
-<div class="panels">
+<div class="panels neobrutal">
     <div class="sidebar">
         <h2>The Pristine Project Portal</h2>
         <nav>
-            <a href="https://fyp.cr0wbar.dev">My dissertation project!</a>
-            <a href="https://threedee.cr0wbar.dev">My 3D web app uni project!</a>
-            <a href="https://github.com/0cr0wbar0">My GitHub portfolio!</a>
-            <a href="https://cr0wbarsartdump.neocities.org">My art website!</a>
+            <a class="neobrutal nb-button" href="https://fyp.cr0wbar.dev">My dissertation project!</a>
+            <a class="neobrutal nb-button" href="https://threedee.cr0wbar.dev">My 3D web app uni project!</a>
+            <a class="neobrutal nb-button" href="https://github.com/0cr0wbar0">My GitHub portfolio!</a>
+            <a class="neobrutal nb-button" href="https://cr0wbarsartdump.neocities.org">My art website!</a>
         </nav>
     </div>
     <div class="bio">
@@ -87,7 +87,7 @@ $arr = [
 
 <img width="200rem" height="200rem" onclick="sound()" src="static/maidhugh.PNG" class="bearcorner" style="left: -4rem; rotate: 45deg; right: unset; top: 50rem">
 
-<div class="footer">
+<div class="footer neobrutal">
     <a href="https://cr0wbar.dev"><img src="static/icons/logo.gif"></a>
     <a href="https://j0.lol"><img src="static/icons/j0.gif"></a>
     <a href="https://meihapps.gay"><img src="static/icons/meightyeight.gif"></a>

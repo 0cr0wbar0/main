@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext", "DOM"],
+    "outDir": "static/",
+    "types": []
   }
 }
