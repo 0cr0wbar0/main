@@ -9,9 +9,7 @@ function sound(): void {
   } else {
     squeak.play();
   }
-  let image: HTMLImageElement = document.querySelector(
-    ".bearcorner"
-  ) as HTMLImageElement;
+  let image = document.querySelector(".bearcorner") as HTMLImageElement;
   if (image.style.right === "unset") {
     image.style.left = "unset";
     image.style.right = "-4rem";
@@ -25,9 +23,32 @@ function sound(): void {
     String(Math.random() * document.documentElement.clientHeight) + "px";
 }
 
+function selectStatus(): HTMLHeadingElement | HTMLAudioElement {
+  let stringArr = [
+    "productive",
+    "creative",
+    "busy",
+    "a desire to play Hollow Knight",
+    "static/half-life-2-death-sound.mp3"
+  ];
+
+  let element = stringArr[Math.floor(Math.random() * stringArr.length)];
+
+  if (element.includes("static")) {
+    let audioResult: HTMLAudioElement = new Audio(element);
+    audioResult.controls = true;
+    audioResult.style.margin = "1rem";
+    return audioResult;
+  } else {
+    let textResult = document.createElement("h2");
+    textResult.innerText = element;
+    return textResult;
+  }
+}
+
 function sanitise(string: string): string {
   // credit for function: https://stackoverflow.com/a/48226843
-  const map = {
+  const map: { [key: string]: string } = {
     "&": "&amp;",
     "<": "&lt;",
     ">": "&gt;",
@@ -46,12 +67,18 @@ function submit_feelings(): void {
   if (emotion === "") {
     emotion = "nothing";
   }
-  document.querySelector("#mood").innerHTML =
-    "<h3><b>" + sanitise(emotion) + "</b></h3>";
-  document.querySelector(".subheader details").remove();
+  let moodSection = document.querySelector("#mood") as HTMLDivElement;
+  let newEmotion: HTMLHeadingElement = document.createElement("h2");
+  newEmotion.innerHTML = "<strong>" + sanitise(emotion) + "</strong>";
+  document.querySelector(".subheader details")!.remove();
+  moodSection.replaceChildren(newEmotion);
   document
-    .querySelector(".subheader")
-    .insertAdjacentHTML("beforeend", "<p>You know what? Me too.</p>");
+    .querySelector(".subheader")!
+    .insertAdjacentHTML(
+      "beforeend",
+      "<p style='margin: 0'>You know what? Me too.</p>"
+    );
 }
 
-document.querySelector("#submit").addEventListener("click", submit_feelings);
+document.querySelector("#mood")!.appendChild(selectStatus());
+document.querySelector("#submit")!.addEventListener("click", submit_feelings);
