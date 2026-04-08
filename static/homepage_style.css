@@ -1,3 +1,7 @@
+:root {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: Inter;
   src: url("InterVariable.ttf");
@@ -31,7 +35,6 @@
 
 @media (max-width: 1050px) {
   .header img {
-    height: 80%;
     width: 80%;
   }
 }
@@ -154,14 +157,14 @@
     max-width: 80rem;
     flex-direction: column-reverse;
     justify-content: center;
-    padding: 2rem;
+    padding: 0;
     background-color: #267713;
     color: #dcffd6;
     border-radius: 0.5rem;
   }
 
   .panels div {
-    padding: 2rem;
+    padding: 0.75rem;
     margin: 2rem;
     border-image-source: url("colourborder.png");
     border-image-slice: 71 71 71 91;
