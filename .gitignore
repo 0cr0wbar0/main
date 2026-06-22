@@ -1,4 +1,5 @@
 .env
 .well-known
 .DS_Store
+/static/.DS_Store
 .idea
