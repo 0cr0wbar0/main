@@ -80,5 +80,17 @@ function submit_feelings(): void {
     );
 }
 
-document.querySelector("#mood")!.appendChild(selectStatus());
-document.querySelector("#submit")!.addEventListener("click", submit_feelings);
+function funToggle(): void {
+  const moodBox = document.querySelector(".subheader") as HTMLDivElement;
+  const bear = document.querySelector(".bearcorner") as HTMLImageElement;
+  const arr: HTMLElement[] = [moodBox, bear];
+  for (const element of arr) {
+    element.style.display = element.style.display.includes("none")
+      ? "unset"
+      : "none";
+  }
+}
+
+funToggle();
+(document.querySelector("#mood") as HTMLDivElement).appendChild(selectStatus());
+(document.querySelector("#submit") as HTMLButtonElement).addEventListener("click", submit_feelings);

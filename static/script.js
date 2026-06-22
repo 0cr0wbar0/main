@@ -74,5 +74,16 @@ function submit_feelings() {
         .querySelector(".subheader")
         .insertAdjacentHTML("beforeend", "<p style='margin: 0'>You know what? Me too.</p>");
 }
+function funToggle() {
+    const moodBox = document.querySelector(".subheader");
+    const bear = document.querySelector(".bearcorner");
+    const arr = [moodBox, bear];
+    for (const element of arr) {
+        element.style.display = element.style.display.includes("none")
+            ? "unset"
+            : "none";
+    }
+}
+funToggle();
 document.querySelector("#mood").appendChild(selectStatus());
 document.querySelector("#submit").addEventListener("click", submit_feelings);
